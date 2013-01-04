@@ -1,6 +1,7 @@
 " This is standard pathogen and vim setup
 set nocompatible
 call pathogen#infect() 
+call pathogen#helptags()
 syntax on
 filetype plugin indent on
 set number
