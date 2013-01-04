@@ -1,4 +1,3 @@
-" This is standard pathogen and vim setup
 set nocompatible
 call pathogen#infect() 
 call pathogen#helptags()
@@ -25,7 +24,10 @@ let g:EasyMotion_leader_key = ',,'
 hi link EasyMotionTarget ErrorMsg
 hi link EasyMotionShade  Commen
 
+" NERDTree
 noremap <F2> :NERDTreeToggle<CR>
+
+" CommandT
 noremap <leader>o :CommandT<CR>
 noremap <leader>O :CommandTFlush<CR>
 noremap <leader>m :CommandTBuffer<CR>
@@ -46,15 +48,13 @@ nmap  <leader>L d])%,S
 imap ä <ESC>j^i
 
 
-"Fenster tauschen mit Strg+x
-"map <C-x> <C-w>x
-""Maps zum ändern von Splitscreens
+" Maps zum ändern von Splitscreens
 map <C-k> <C-w>+
 map <C-j> <C-w>-
 map <C-l> <C-w><
 map <C-h> <C-w>>
 
-"Tab navigation
+" Tab navigation
 nnoremap th  :tabfirst<CR>
 nnoremap tj  :tabnext<CR>
 nnoremap tk  :tabprev<CR>
@@ -62,10 +62,10 @@ nnoremap tl  :tablast<CR>
 nnoremap tt  :tabedit<Space>
 nnoremap td  :tabclose<CR>
 
-""Fenster wechseln
+" Fenster wechseln
 noremap ö <C-w>w
 
-""Avoid ESC
+" Avoid ESC
 :imap jj <Esc>
 
 
