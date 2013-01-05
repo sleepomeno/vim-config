@@ -67,7 +67,7 @@ nnoremap tl  :tablast<CR>
 nnoremap tt  :tabedit<Space>
 nnoremap td  :tabclose<CR>
 
-" Fenster wechseln
+" Change window
 noremap ö <C-w>w
 
 " Avoid ESC
