@@ -22,6 +22,7 @@
 [submodule "bundle/sparkup"]
 	path = bundle/sparkup
 	url = https://github.com/tristen/vim-sparkup
+	ignore = dirty
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = https://github.com/tpope/vim-surround

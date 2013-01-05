@@ -32,6 +32,9 @@ hi link EasyMotionShade  Commen
 " NERDTree
 noremap <F2> :NERDTreeToggle<CR>
 
+" Ack
+noremap <leader>a :Ack<Space>
+
 " CommandT
 noremap <leader>o :CommandT<CR>
 noremap <leader>O :CommandTFlush<CR>
