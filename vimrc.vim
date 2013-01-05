@@ -5,6 +5,9 @@ syntax on
 filetype plugin indent on
 set number
 set hlsearch
+set incsearch
+set ignorecase
+set smartcase
 set wmh=0
 set tabstop=2
 set shiftwidth=2
@@ -18,6 +21,8 @@ color asmanian2
 
 let maplocalleader=","
 let mapleader = ","
+
+nmap <leader>r :source ~/.vimrc<CR>
 
 " Easymotion
 let g:EasyMotion_leader_key = ',,' 
