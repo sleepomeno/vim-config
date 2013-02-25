@@ -5,20 +5,9 @@ syntax on
 filetype plugin indent on
 set number
 set hlsearch
+set backupcopy=yes
 
-" Fold Javascript files
-function! JavaScriptFold() 
-    setl foldmethod=syntax
-    setl foldlevelstart=1
-    syn region foldBraces start=/{/ end=/}/ transparent fold keepend extend
-
-    function! FoldText()
-        return substitute(getline(v:foldstart), '{.*', '{...}', '')
-    endfunction
-    setl foldtext=FoldText()
-endfunction
-au FileType javascript call JavaScriptFold()
-au FileType javascript setl fen
+autocmd BufRead,BufNewFile *.cljs setlocal filetype=clojure
 
 set incsearch
 set ignorecase
@@ -31,13 +20,17 @@ set wildignore+=*/lib/**
 set wildignore+=*/war/**
 set wildignore+=*/target/**
 
-
 color asmanian2
 
 let maplocalleader=","
 let mapleader = ","
 
 nmap <leader>r :source ~/.vimrc<CR>
+
+nnoremap <silent> <leader>l :<C-u>nohlsearch<CR><C-l>
+
+" bind ctrl+space for omnicompletion
+" inoremap <C-Space> <C-x><C-o>
 
 " Easymotion
 let g:EasyMotion_leader_key = ',,' 
@@ -106,6 +99,6 @@ let vimclojure#SplitSize = 10
 
 " Paredit
 let g:paredit_mode = 1
-
+let g:paredit_electric_return = 0
 " CommandT
 let g:CommandTMaxHeight = 15
