@@ -7,8 +7,6 @@ set number
 set hlsearch
 set backupcopy=yes
 
-autocmd BufRead,BufNewFile *.cljs setlocal filetype=clojure
-
 set incsearch
 set ignorecase
 set smartcase
@@ -20,10 +18,12 @@ set wildignore+=*/lib/**
 set wildignore+=*/war/**
 set wildignore+=*/target/**
 
+set history=100
+
 color asmanian2
 
-let maplocalleader=","
-let mapleader = ","
+let maplocalleader="ö"
+let mapleader = "ö"
 
 nmap <leader>r :source ~/.vimrc<CR>
 
@@ -61,7 +61,7 @@ nmap  <leader>L d])%,S
 " Splice S
 " Raise I
 " go to first char of next line
-imap ä <ESC>j^i
+"imap ä <ESC>j^i
 
 
 " Maps zum ändern von Splitscreens
@@ -79,7 +79,7 @@ nnoremap tt  :tabedit<Space>
 nnoremap td  :tabclose<CR>
 
 " Change window
-noremap ö <C-w>w
+"noremap ö <C-w>w
 
 " Avoid ESC
 :imap jj <Esc>
@@ -87,15 +87,15 @@ noremap ö <C-w>w
 
 " Here's the vimclojure stuff. You'll need to adjust the NailgunClient
 " setting if you're on windows or have other problems.
-let vimclojure#FuzzyIndent=1
-let vimclojure#HighlightBuiltins=1
-let vimclojure#HighlightContrib=1
-let vimclojure#DynamicHighlighting=1
-let vimclojure#ParenRainbow=1
-let vimclojure#WantNailgun = 1
-let vimclojure#NailgunClient = $HOME . "/.vim/lib/vimclojure-nailgun-client/ng"
-let vimclojure#SplitPos = "bottom"
-let vimclojure#SplitSize = 10
+"let vimclojure#FuzzyIndent=1
+"let vimclojure#HighlightBuiltins=1
+"let vimclojure#HighlightContrib=1
+"let vimclojure#DynamicHighlighting=1
+"let vimclojure#ParenRainbow=1
+"let vimclojure#WantNailgun = 1
+"let vimclojure#NailgunClient = $HOME . "/.vim/lib/vimclojure-nailgun-client/ng"
+"let vimclojure#SplitPos = "bottom"
+"let vimclojure#SplitSize = 10
 
 " Paredit
 let g:paredit_mode = 1

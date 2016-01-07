@@ -17,6 +17,7 @@ hi Normal ctermbg=DarkGrey ctermfg=White guifg=White guibg=grey20
 
 " Groups used in the 'highlight' and 'guicursor' options default value.
 hi ErrorMsg term=standout ctermbg=DarkRed ctermfg=White guibg=Red guifg=White
+hi Comment term=standout ctermfg=Grey ctermbg=DarkGrey 
 hi IncSearch term=reverse cterm=reverse gui=reverse
 hi ModeMsg term=bold cterm=bold gui=bold
 hi StatusLine term=reverse,bold cterm=reverse,bold gui=reverse,bold
